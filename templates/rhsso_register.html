@@ -1,0 +1,59 @@
+<div class="modal-header" style="background-color: #345073 ; color: #fff">
+    <h3 class="modal-title" id="modal-title">New Developer Registration</h3>
+</div>
+<div class="modal-body" id="modal-body">
+    <form name="form.userForm" ng-submit="submitForm()" novalidate>
+        <div class="modal-body">
+            <!--FIRST NAME -->
+            <div class="form-group">
+                <label>First Name</label>
+                <input type="text" name="first_name" class="form-control" ng-model="first_name" required>
+                <p ng-show="form.userForm.name.$invalid && !form.userForm.name.$pristine" class="help-block">Your first name is required.</p>
+            </div>
+
+            <!-- LAST NAME -->
+            <div class="form-group">
+                <label>Last Name</label>
+                <input type="text" name="last_name" class="form-control" ng-model="last_name" required>
+                <p ng-show="form.userForm.name.$invalid && !form.userForm.name.$pristine" class="help-block">Your last name is required.</p>
+            </div>
+            
+            <!-- USERNAME -->
+            <div class="form-group">
+                <label>Create Username</label>
+                <input type="text" name="username" class="form-control" ng-model="user.username" ng-minlength="8" ng-maxlength="12" required>
+                <p ng-show="form.userForm.username.$error.minlength" class="help-block">Username is too short.</p>
+                <p ng-show="form.userForm.username.$error.maxlength" class="help-block">Username is too long.</p>
+            </div>
+            
+            <!-- EMAIL -->
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" name="email" class="form-control" ng-model="email" required>
+                <p ng-show="form.userForm.email.$invalid && !form.userForm.email.$pristine" class="help-block">Enter a valid email.</p>
+            </div>
+    
+            <!-- PASSWORD -->
+            <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" name="password" class="form-control" ng-model="password" required>
+                    <p ng-show=""></p>
+            </div>
+
+            <!-- PASSWORD -->
+            <div class="form-group">
+                    <label>Re-enter Password</label>
+                    <input type="password" name="password_2" class="form-control" ng-model="password_2" required>
+                    <p ng-show=""></p>
+            </div>
+
+        </div>
+    </form>
+
+
+</div>
+<div class="modal-footer">
+    <button type="submit" class="btn btn-primary" ng-disabled="form.userForm.$invalid" ng-click="ok()">OK</button>
+    <button class="btn btn-warning" ng-click="ok()">Cancel</button>    
+    <!-- <button class="btn btn-primary" type="button" ng-click="ok()">OK</button> -->
+</div>

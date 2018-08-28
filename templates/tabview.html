@@ -1,0 +1,25 @@
+<!-- 
+IGNORE THE NAME 'REVENUE.HTML' .. THIS IS THE POPUP PANEL THAT SHOWS THE APIS FOR A 
+PARTICULAR TENENT
+-->
+<div class="modal-header" style="background-color: #345073 ; color: #fff">
+    <h3 class="modal-title" id="modal-title">{{tenantDetail.name}}</h3>
+</div>
+<div class="modal-body" id="modal-body">
+
+<uib-tabset justifed="true">
+    <uib-tab heading="{{api.name}}" ng-repeat="api in tenantDetail.apis" ng-click="changeTab(api)">
+        <h3>Mapping Rules</h3>
+        <div ng-repeat="item in mappingList" style="border: 0px solid #000; width:100%">
+            <div style="background-color:#0a6fb4; float:left; height: 30px; width: 5%;  font-weight: bold; color:#fff; padding-left: 5px; padding-top: 5px">{{item.mapping_rule.http_method}}</div>
+            <div style="background-color:#e7f0f7; float:left; height: 30px; width: 90%; font-weight: bold ; padding-left: 5px; padding-top: 5px">{{item.mapping_rule.pattern}}</div>
+            <br/><br/>
+        </div>
+    </uib-tab>
+</uib-tabset>
+
+
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
+</div>
