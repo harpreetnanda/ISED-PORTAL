@@ -20,7 +20,7 @@ angular.module('myApp.services', ['ui.bootstrap'])
 .service ('tenantSvc', function ($http){
     var getMappingList = function (tid, sid){
         // http://localhost:8001/threescale/tenants/10/mappinglist/10
-        baseurl = 'http://backend-3scale-portal.df24.ised-dev.openshiftapps.com/threescale/tenants/' + tid + '/mappinglist/' + sid;
+        baseurl = 'http://3scale-portal.df24.ised-dev.openshiftapps.com/threescale/tenants/' + tid + '/mappinglist/' + sid;
         return $http.get(baseurl);
     }
 
@@ -30,7 +30,7 @@ angular.module('myApp.services', ['ui.bootstrap'])
 })
 
 .service ('masterSvc', function ($http){
-    var baseurl = 'http://backend-3scale-portal.df24.ised-dev.openshiftapps.com/threescale/tenants';
+    var baseurl = 'http://3scale-portal.df24.ised-dev.openshiftapps.com/threescale/tenants';
     var currTenant = "";
     var localTenants = [];
 
