@@ -82,7 +82,12 @@ angular.module('myApp.home', ['ngRoute'])
     $scope.tenantDetail = {};
     $scope.mappingList = {};
     $scope.tenantDetail = masterSvc.getTenantDetail(currTenant);
-    $scope.mappingList = tenantSvc.getMappingList($scope.tenantDetail.id , 24);
+    var promise = tenantSvc.getMappingList($scope.tenantDetail.id , 24);
+    promise.then (
+      function(payload){
+        $scope.mappingList = payload.data;
+      }
+    )
     $scope.ok = function () {
       $uibModalInstance.close();
     };
