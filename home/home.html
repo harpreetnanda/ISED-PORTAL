@@ -20,9 +20,10 @@
             <h5 class="panel-title">{{tenant.name}}</h5>
           </header>
           <div class="panel-body" >
-             <p>This is a test</p>
+            
             <div class="newspaper" >
-              <div ng-repeat="service in tenant.apis.services" >{{service.service.name}} + Description<br/>This will be the API description</div>
+              <div ng-repeat="service in tenant.apis.services" >{{service.service.name}}<br/>
+              Publish Date: {{service.service.created_at}} </div>
           </div>
           <hr/>
           <!-- THESE ICONS EITHER TAKE YOU TO THE LOCAL VIEWER OR DIRECTLY TO THE DEVELOPER PORTAL-->

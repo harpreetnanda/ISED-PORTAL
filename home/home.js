@@ -87,7 +87,7 @@ angular.module('myApp.home', ['ngRoute'])
 
     $scope.changeTab = function (api) {
       var tid = $scope.tenantDetail.id;
-      var sid = api.service_id;
+      var sid = api.service.id;
       var promise = tenantSvc.getMappingList (tid, sid);
       promise.then (
         function(payload){

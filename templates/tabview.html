@@ -8,7 +8,7 @@ PARTICULAR TENENT
 <div class="modal-body" id="modal-body">
 
 <uib-tabset justifed="true">
-    <uib-tab heading="{{api.name}}" ng-repeat="api in tenantDetail.apis" ng-click="changeTab(api)">
+    <uib-tab heading="{{api.name}}" ng-repeat="api in tenantDetail.apis.services" ng-click="changeTab(api)">
         <h3>Mapping Rules</h3>
         <div ng-repeat="item in mappingList" style="border: 0px solid #000; width:100%">
             <div style="background-color:#0a6fb4; float:left; height: 30px; width: 5%;  font-weight: bold; color:#fff; padding-left: 5px; padding-top: 5px">{{item.mapping_rule.http_method}}</div>
