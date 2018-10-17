@@ -80,7 +80,7 @@ angular.module('myApp.home', ['ngRoute'])
     var currTenant = masterSvc.getCurrentTenant();
     
     $scope.tenantDetail = {};
-    $scope.mappingList = {}''
+    $scope.mappingList = {};
     $scope.tenantDetail = masterSvc.getTenantDetail(currTenant);
     $scope.mappingList = tenantSvc.getMappingList(tenantDetail.id , 24);
     $scope.ok = function () {
