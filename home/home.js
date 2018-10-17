@@ -78,7 +78,7 @@ angular.module('myApp.home', ['ngRoute'])
 
 .controller('apiDetailsCtrl', function ($scope, $uibModalInstance, masterSvc, tenantSvc) {
     var currTenant = masterSvc.getCurrentTenant();
-    $scope.mappingList = [];
+    $scope.mappingList = tenantSvc.getMappingList(currTenant.id , 24);
     $scope.tenantDetail = {};
     $scope.tenantDetail = masterSvc.getTenantDetail(currTenant);
     $scope.ok = function () {
