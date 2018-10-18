@@ -86,6 +86,9 @@ angular.module('myApp.home', ['ngRoute'])
     promise.then (
       function(payload){
         $scope.mappingList = payload.data;
+        console.log("This is the mapping list data " + payload  );
+        console.log("This is the other mapping list data " + payload  );
+
       }
     )
     $scope.ok = function () {
