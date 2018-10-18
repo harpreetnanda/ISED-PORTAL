@@ -22,22 +22,43 @@
           <div class="panel-body" >
             
             <div class="newspaper" >
-              <div ng-repeat="service in tenant.apis.services" >{{service.service.name}}<br/>
-              Publish Date: {{service.service.created_at}} </div>
+            <table>
+            <thead>
+            <tr>
+            <td>
+             API Name
+            </td>
+            <td>
+             Publish Date
+            </td>
+            </tr>
+            </thead>
+            <tr ng-repeat="service in tenant.apis.services">
+            <td>
+            {{service.service.name}}
+            </td>
+             <td>
+           {{service.service.created_at}} 
+            </td>
+            </tr>
+            </table>
+            <!--   <div ng-repeat="service in tenant.apis.services" >{{service.service.name}}  <br/>
+              Publish Date: {{service.service.created_at}} 
+              </div> -->
           </div>
           <hr/>
           <!-- THESE ICONS EITHER TAKE YOU TO THE LOCAL VIEWER OR DIRECTLY TO THE DEVELOPER PORTAL-->
           <div style="float: left">
-              <img src="assets/telescope.png" style="height:22px" ng-click="openDetails(tenant.name)"/>
+             <!--  <img src="assets/telescope.png" style="height:22px" ng-click="openDetails(tenant.name)"/> -->
               <a href="https://{{tenant.domain}}" target="_blank">
                 <img src="assets/register-icon-bl-gr.png" style="height:23px"/>
               </a>
           </div>
-          <div style="float: right">
-              <!-- THESE ICONS ARE PLACEHOLDERS -->
+          <!-- <div style="float: right">
+              THESE ICONS ARE PLACEHOLDERS
               <img src="assets/github.png" style="height:20px" ng-click="open('lg', 'foo')"/>
-              <img src="assets/slack_Icon.png" style="height:22px" ng-click="open('lg', 'foo')"/>
-          </div>
+              <img src="assets/slack_Icon.png" style="height:22px" ng-click="open('lg', 'foo')"/>-->
+          </div> 
         </section>
       </div>
     </div>
